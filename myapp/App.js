@@ -17,12 +17,21 @@ import PracticeScrollView from "./components/04-Practice-view/02-practice-scroll
 import PracticeFlatList from "./components/04-Practice-view/03-practice-flatList"
 import FlatListComponent from "./components/05-practice-flatlist-component/flat-list-component"
 import ExternalImage from "./components/06-images/external-image"
+import LocalImages from "./components/06-images/local-image"
+import BackgroundImage from "./components/06-images/background-image"
+import Icons from "./components/07-icons/01-icons"
+import THighlight from "./components/08-touchable/01-touchable-highlight"
+import Prsbl from "./components/08-touchable/02-pressable"
+import CustomComponentExample from "./components/08-touchable/03-custom-component-example"
+import PracticeCounter from "./components/10-practice/counter"
+import CategoryManager from "./components/11-practice-category/category-manager"
+
 
 
 
 const App= () =>{
     return( 
-    <SafeAreaView style={{backgroundColor:"white", flex:1, }}>
+    <SafeAreaView style={{backgroundColor:"white", flex:1}}>
         { /*<Flex1/>
              <Flex2/>
              <Flex3/>
@@ -40,9 +49,19 @@ const App= () =>{
                <PracticeScrollView/> 
                <PracticeFlatList/>
                <FlatListComponent/>
+              <ExternalImage/> 
+              <LocalImages/>
+              <RequrieLocalImages/>
+              <BackgroundImage/>
+              <Icons/>
+            <THighlight/>
+            <Prsbl/>
+            <CustomComponentExample/>
+            <PracticeCounter/>
         */ }
           <StatusBar backgroundColor="white" barStyle="dark-content"/>
-         <ExternalImage/>
+          
+          <CategoryManager/>
 
     </SafeAreaView>
 )}

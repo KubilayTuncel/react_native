@@ -1,18 +1,18 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import globalStyles from '../../assets/styles/globalStyles'
+import homeLogo from '../../assets/img/Download.png'
 
-const ExternalImage = () => {
+const LocalImages = () => {
   return (
     <View style={globalStyles.container}>
-      <Text>ExternalImage</Text>
-         <Image style={styles.logo} source={{uri:"https://reactnative.dev/img/tiny_logo.png"}}/>
-      
+      <Text>LocalImages</Text>
+      <Image style={styles.logo} source={homeLogo}/>
     </View>
   )
-  }
+}
 
-export default ExternalImage
+export default LocalImages
 
 const styles = StyleSheet.create({
     logo:{
