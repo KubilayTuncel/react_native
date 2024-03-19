@@ -1,4 +1,7 @@
 import { StatusBar, View, SafeAreaView } from "react-native"
+import { NavigationContainer } from "@react-navigation/native"
+import {createNativeStackNavigator } from "@react-navigation/native-stack"
+
 import Flex1 from "./components/01-flex/flex1"
 import Flex2 from "./components/01-flex/flex2"
 import Flex3 from "./components/01-flex/flex3"
@@ -25,13 +28,23 @@ import Prsbl from "./components/08-touchable/02-pressable"
 import CustomComponentExample from "./components/08-touchable/03-custom-component-example"
 import PracticeCounter from "./components/10-practice/counter"
 import CategoryManager from "./components/11-practice-category/category-manager"
+import MyAlert from "./components/12-api/myAlert"
+import MyDimentions from "./components/12-api/dimentions"
+import MyKeyboard from "./components/12-api/keyboard"
+import MyLinking from "./components/12-api/linking"
+import MyPlatform from "./components/12-api/platform"
+import MyShare from "./components/12-api/share"
+import MyVibration from "./components/12-api/vibration-debugging"
+import Debugging from "./components/13-debuging/debuging"
+import StackNavigation from "./components/14-navigation/stack-navigation"
+import Index from "./components/00-index"
 
 
-
+const Stack = createNativeStackNavigator();
 
 const App= () =>{
     return( 
-    <SafeAreaView style={{backgroundColor:"white", flex:1}}>
+    /*<SafeAreaView style={{backgroundColor:"white", flex:1}}>
         { /*<Flex1/>
              <Flex2/>
              <Flex3/>
@@ -58,12 +71,35 @@ const App= () =>{
             <Prsbl/>
             <CustomComponentExample/>
             <PracticeCounter/>
-        */ }
+            <CategoryManager/>
+            <MyAlert/>
+            <MyDimentions/>
+            <MyKeyboard/>
+            <MyLinking/>
+            <MyPlatform/>
+            <MyShare/>
+             <MyVibration/>
+              <Debugging/>
+              <StackNavigation/>
+              }
           <StatusBar backgroundColor="white" barStyle="dark-content"/>
-          
-          <CategoryManager/>
-
     </SafeAreaView>
+        */ 
+       <NavigationContainer>
+          <Stack.Navigator>
+              <Stack.Screen name="Index" component={Index}/>
+              <Stack.Screen name="Flex1" component={Flex1}/>
+              <Stack.Screen name="Flex2" component={Flex2}/>
+              <Stack.Screen name="Flex3" component={Flex3}/>
+              <Stack.Screen name="Flex4" component={Flex4}/>
+              <Stack.Screen name="Flex5" component={Flex5}/>
+              <Stack.Screen name="Flex6" component={Flex6}/>
+              <Stack.Screen name="Flex7" component={Flex7}/>
+              <Stack.Screen name="Flex8" component={Flex8}/>
+              <Stack.Screen name="Internal" component={Internal}/>
+          </Stack.Navigator>
+       </NavigationContainer>
+    
 )}
 
 export default App

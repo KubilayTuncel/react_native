@@ -13,7 +13,7 @@ const Flex1 = () =>{
             <View style={{backgroundColor:"green", padding:10, alignItems:"center"}}>
             <Text > Section 3</Text>
             </View>
-            </View>
+        </View>
     )
 }
 

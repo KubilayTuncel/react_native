@@ -12,9 +12,10 @@ const WelcomeScreen = ({setGameStatus}) => {
       <View style={styles.content}>
         <Text style={styles.title}>Welcome to the Game</Text>
         <Spacer/>
-        <Text style={styles.desc}>Guess a number between {gameInitials.randomNumberDownLimit} and {gameInitials.randomNumberUpLimit} 
+        <Text style={styles.desc}>Guess a number between {gameInitials.randomNumberDownLimit} and {gameInitials.randomNumberUpLimit} {" "}
         in {gameInitials.totalTimes} seconds. You have {gameInitials.totalShots} shots.</Text>
-        <IconButton title="Start The Game" icon="gamepad-variant-outline" onPress={()=>setGameStatus('start')}/>
+        <Spacer/>
+        <IconButton title="Start The Game" icon="gamepad-variant-outline" onPress={()=>setGameStatus('game')}/>
       </View>
       
     </View>
@@ -42,6 +43,5 @@ const styles = StyleSheet.create({
     desc:{
         fontSize: 20,
         textAlign: 'center',
-        fontFamily:"italic",
     }
 })

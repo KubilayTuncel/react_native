@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "navigate",
+    "slug": "navigate",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist":{
+        "NSMicrophoneUsageDescription":"A message that tells the user why the app is requesting access to the device’s microphone.",
+        "NSPhotoLibraryUsageDescription":"A message that tells the user why the app is requesting access to the user’s photo library.",
+        "NSCameraUsageDescription":"A message that tells the user why the app is requesting access to the device’s camera.",
+        "UIBackgroundModes":[
+          "location",
+          "fetch"
+        ]
+
+      },
+      "config":{
+        "googleMapsApiKey":"google dan alinan map api key konulmali"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["CAMERA","READ_EXTERNAL_STORAGE","WRITE_EXTERNAL_STORGE", "ACCESS_COARSE_LOCATION","ACCESS_FINE_LOCATION","FOREGROUND_SERVICE"],
+      "config":{
+        "googleMaps":{
+          "apiKey":"google dan alinan map api key konulmali"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
